@@ -297,7 +297,7 @@ text-transform: uppercase;
   margin-bottom: 95px;
  }
 
-.company-values .lv:not(:last-child){
+.company-values li:not(:last-child){
   margin-right: 30px;
 }
 
@@ -440,12 +440,20 @@ margin-bottom: 4px;
   flex-wrap: wrap;
   }
 
-.portofolio-list-item img{
+ .portofolio-list-item img{
   margin-top: 30px;
 }
 
   .portofolio-list-item:not(:nth-child(3n)){
     margin-right: 30px;
-      }
+      } 
+
+  /* .portofolio-list li{
+     margin-top: 30px;
+  }
+
+.portofolio-list li:not(:nth-child(3n)){
+  margin-right: 30px;
+} */
 
  

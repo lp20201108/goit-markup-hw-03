@@ -16,6 +16,16 @@ html{
   --primary-white-color: white;
 }
 
+ img{
+   display: block;
+   max-width: 100%;
+ }
+
+ a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*=========== backgrounds colors================ */
 
 body {
@@ -28,54 +38,35 @@ body {
   margin: 0;
   }
   
-  .team {
-  background-color: #e5e5e5;
-   }
+  
 
-   .hero,
-    footer {
-   background-color: var(--dark-background-color);
-  }
+  /*================= container// flex box geral elements================= */
 
   .container {
   width: 1200px;
-   padding-left: 15px;
+  padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
-header{
-    display: flex;
-    align-items: center;
 
-  }
-
-.navigation{
-  display: flex;
-  }
-  
-  .navigation.site-nav.list{
-    display: flex;
-    align-items: center;
-    outline: solid tomato 2px;
-  }
-
-  header.contacts {
-    display: flex;
-    align-items: center;
-  }
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
   
 
 .main,
 .section,
 .footer,
 {
-  margin-top: 0;
+  margin-top: 0; 
   margin-bottom:0;
-  outline: solid 2px tomato;
-}
+ }
 
+
+ /*================= COMPONENTS================= */
 
 /*================= lists================= */
 
@@ -84,12 +75,6 @@ header{
   padding: 0;
   margin: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 
 /* =================logo style =================*/
 
@@ -153,36 +138,10 @@ min-width: 200px;
 height: 50px;
 }
 
-.filters >.button {
-  font-weight: 500;
-}
-
-.hero > .button {
-  display: inline-block;
-  padding: 10px 32px;
-  margin-bottom: 200px;
-  margin-left: 700px;
-  margin-right: 700px;
-}
-
 
 
 /*================= titles =================*/
 
-.hero-title {
-color: var(--primary-white-color);
-font-style: normal;
-font-weight: 900;
-font-size: 44px;
-line-height: 1.4;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-text-align: center;
-margin-top: 0;
-margin-bottom: 30px;
-max-width:696px;
-
-}
 
 h2 {
 font-weight: bold;
@@ -195,24 +154,52 @@ text-align: center;
 .section-title {
   color: var(--title-text-color);
   margin-top: 0;
-  outline: tomato solid 2px;
   }
 
-.company-values .section-title  {
 
-font-weight: bold;
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
+/*================= END COMPONENTS================= */
+
+/*================= header and navigation section ================= */
+  .header{
+    padding: 32px 0;
+  }
+
+   .header .container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .header .address {
+  margin-left: auto;
+  margin-right: 40px;
+} */
+
+  
+ .navigation{
+  display: flex;
+  align-items: center;
+  
+  }
+
+    .nav-logo{
+    margin-right: 90px;
+  }
+    
+  .site-nav,
+  .contacts {
+    display: flex;
+  }
+
+    .site-nav li:not(:last-child){
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+.contacts-item:not(:last-child){
+margin-left: auto;
+margin-right: 30px;
 }
 
-
-.company-values.section-title{
-   margin-bottom: 70px;
-   background-color: red;
-}
-
-/* =================site nav style =================*/
 
 .site-nav a {
   color: #212121;
@@ -239,6 +226,11 @@ text-transform: uppercase;
 
 
 /*================= hero section ================= */
+.hero {
+   background-color: var(--dark-background-color);
+
+   
+  }
 
 .hero{
   text-align: center;
@@ -246,77 +238,155 @@ text-transform: uppercase;
 
 
 
+.hero-title {    
+/* display: block; */
+color: var(--primary-white-color);
+font-style: normal;
+font-weight: 900;
+font-size: 44px;
+line-height: 1.4;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+text-align: center;
+margin-top: 0;
+margin-bottom: 30px;
+max-width:696px;
+margin-left: auto;
+margin-right: auto;
+}
 
 
-/*=================  priority section ================= */
+.hero .button {
+  display: inline-block;
+  padding: 10px 32px;
+  margin-bottom: 106px;
+}
+
+
+/*=================  priority section   наши приоритеты  ================= */
+
+
+.company-values .section-title  {
+
+font-weight: bold;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+}
+
+.company-values.section-title{
+   margin-bottom: 70px;
+   background-color: red;
+}
+
+.company-values{
+  display: flex;
+  justify-content: space-between;
+}
+
 
  
 .company.section-title{
   margin-bottom: 10px;
+ 
  }
 
 .description {
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 95px;
+ }
+
+.company-values .lv:not(:last-child){
+  margin-right: 30px;
 }
 
-.directions.section{
-  padding-top: ;
-}
 
 
 /*================directions section  Чем мы занимаемся--> ================= */
 
-.directions,.section-title{
+.directions .section-title{
   margin-bottom: 50px;
+}
+
+
+.company-directions{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
 }
 
 
 
 /*=================  team section ================= */
 
-.team .list .section-title{
-
-font-weight: 500;
-font-size: 16px;
-}
-
-.team.section-title{
-  margin-bottom: 10px;
-  margin-top: 0;
-  padding-top: 0;
- }
-
-
-.team .list .job:not(:last-child) {    
-  font-size: 14px;
-  margin-bottom: 30px;
-  margin-top: 0px;
-
+.team {
+  background-color: #e5e5e5;
    }
 
-.team.section {
-  margin: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+    .team-list-item{
+     background-color: var(--primary-white-color);
+   }
+
+.team .section-title{
+  margin-bottom: 50px;
 }
 
-.team-container{
-  width: 270px;
-  height: 368px;
-
-
+.team-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .photo-team{
-  margin-top: 0;
+  margin-bottom: 30px;;
+}
+
+.under.section-title{
+  font-weight: 500;
+  font-size: 16px;
+ line-height: 1.18em;
+ text-align: center;
   margin-bottom: 30px;
 }
 
+.job{
+font-size: 16px;
+line-height: 1.18em;
+text-align: center;
+margin-bottom: 30px;
+}
 
-/*=================  footer section ================= */
+/* .team .list .job:not(:last-child) {    
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+   } */
 
-.footer{
+/* .photo-team{
+  margin-top: 0;
+  margin-bottom: 30px;
+} */
+
+
+/*===== footer section ================= */
+
+ .footer {
+   background-color: var(--dark-background-color);
+  }
+
+.footer .address,
+.footer .logo-studio {
+  color: var(--primary-white-color);
+  }
+
+.logo-footer{
+  margin-top: 0;
+  margin-bottom: 30px;
+ }
+
+
+
+  .footer{
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -324,56 +394,58 @@ font-size: 16px;
 
 .address {
   font-style: inherit;
+  color: #212121;
 }
 
-
-
-
-
-/*================= style for footer ================= */
-
-.footer a {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer .address {
-  color: var(--primary-white-color);
-}
-.footer .logo-studio {
-  color: var(--primary-white-color);
-  }
-
- .container > .logo-web .logo-span {
-    display: inline-block;
-    margin-bottom: 20px;
-    outline: solid tomato 2px;
-  }
-
-.contacts-footer.list:not(:last-child){
-  display: inline-block;
-  width: 231px;
-  height: 89px;
-  padding: 0;
-  margin: 0;
-}
 
 /*================= style for portfolio page ================= */
 
+
+.filters{
+display:flex;
+justify-content: center;
+}
+.filters .button {
+  font-weight: 500;
+  margin-bottom: 50px;
+  padding: 6px 22px;
+  }
+
+.filters .button:not(:last-child) {
+   margin-right: 10px;
+}
+.portofolio .type{
+  font-size: 16px;
+  line-height: 1,9;
+  /* margin-top: 0; */
+}
+
+.type{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .portofolio .section-title {
+
 
 font-weight: bold;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-}
-
-.portfolio p:not(:last-child){
-font-size: 16px;
-line-height: 1.9;
+margin-bottom: 4px;
 }
 
 
+.portofolio ul{
+  display: flex;
+  flex-wrap: wrap;
+  }
 
-/* .projects-list .item:nth-last-child(n+7) {
-    margin-bottom: 0;
-} */
+.portofolio-list-item img{
+  margin-top: 30px;
+}
+
+  .portofolio-list-item:not(:nth-child(3n)){
+    margin-right: 30px;
+      }
+
+ 

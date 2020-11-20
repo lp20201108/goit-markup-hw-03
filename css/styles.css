@@ -162,12 +162,15 @@ text-align: center;
 /*================= header and navigation section ================= */
   .header{
     padding: 32px 0;
+    border: 1px solid #ECECEC;
   }
 
    .header .container{
     display: flex;
     justify-content: space-between;
   }
+
+  
 
   /* .header .address {
   margin-left: auto;
@@ -223,6 +226,12 @@ margin-right: 30px;
   color: var(--effect-color);
 }
 
+.contacts-item{
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+}
 
 
 /*================= hero section ================= */
@@ -234,6 +243,7 @@ margin-right: 30px;
 
 .hero{
   text-align: center;
+  padding: 200px;
 }
 
 
@@ -259,7 +269,7 @@ margin-right: auto;
 .hero .button {
   display: inline-block;
   padding: 10px 32px;
-  margin-bottom: 106px;
+  
 }
 
 
@@ -294,8 +304,7 @@ text-transform: uppercase;
 .description {
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 95px;
- }
+  }
 
 .company-values li:not(:last-child){
   margin-right: 30px;
@@ -313,7 +322,6 @@ text-transform: uppercase;
 .company-directions{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 
@@ -385,16 +393,25 @@ margin-bottom: 30px;
  }
 
 
-
   .footer{
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 
-.address {
+  .address {
   font-style: inherit;
   color: #212121;
+}
+
+.email,
+.tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts-footer li{
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 
@@ -405,6 +422,7 @@ margin-bottom: 30px;
 display:flex;
 justify-content: center;
 }
+
 .filters .button {
   font-weight: 500;
   margin-bottom: 50px;
@@ -440,15 +458,25 @@ margin-bottom: 4px;
   flex-wrap: wrap;
   }
 
+ 
+  /* border: 1px solid #EEEEEE;
+box-sizing: border-box; */
+
  .portofolio-list-item img{
   margin-top: 30px;
+  
 }
 
   .portofolio-list-item:not(:nth-child(3n)){
     margin-right: 30px;
       } 
 
-      .type:nth-last-child(-n + 3) {
+  .type:nth-last-child(-n + 3) {
       margin-bottom: 0;
       }
+
+  .portofolio-description{
+     border: 1px solid #EEEEEE;
+     box-sizing: border-box;
+  }
 
